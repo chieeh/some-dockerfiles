@@ -11,6 +11,7 @@ RUN adduser \
     --no-create-home \
     --uid 10014 \
     "choreo"
+RUN chown -R "10014:10014" /app && chmod +x /app/sub2clash
 # Use the above created unprivileged user
 USER 10014
 
